@@ -1,6 +1,12 @@
-module.exports = {
+/* eslint-disable linebreak-style */
+/* eslint-disable spaced-comment */
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env' });
+
+export default {
   siteMetadata: {
-    title: 'My Gatsby Site'
+    title: 'Blog using Gatsby and AirTable'
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorsYaml'
@@ -39,6 +45,18 @@ module.exports = {
     'gatsby-transformer-yaml',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-emotion'
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: process.env.ACTIONS_BASE_ID,
+            tableName: process.env.ACTIONS_TABLE_NAME
+          }
+        ]
+      }
+    }
   ]
 };
