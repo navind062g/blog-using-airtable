@@ -1,3 +1,9 @@
+haters/
+
+*.sketch
+*.fig
+course-layout.md
+
 # Logs
 logs
 *.log
@@ -51,13 +57,21 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# dotenv environment variable files
+.env*
+
+# gatsby files
+.cache/
+public
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
-# gatsby specific folders
-public/
-.cache/
-
+finished-files-before-record/
