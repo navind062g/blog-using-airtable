@@ -12,8 +12,7 @@
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-        },
-        "sourceType": "module"
+        }
     },
     "plugins": [
         "react",
@@ -25,5 +24,6 @@
         "react/jsx-filename-extension": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "react/jsx-one-expression-per-line": "off"
-    }
+    },
+    "caseSensitive": false
 }

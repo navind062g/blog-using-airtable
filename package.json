@@ -1,6 +1,6 @@
 {
   "name": "gatsby-blog-using-airtable",
-  "author": "Navin Dhirwani",
+  "author": "Navin",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
@@ -27,13 +27,19 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-emotion": "^9.0.0",
-    "styled-system": "^3.2.0"
+    "react-icons": "^4.4.0",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "styled-system": "^3.2.0",
+    "unified": "^10.1.2"
   },
   "scripts": {
-    "dev": "node_modules/.bin/gatsby develop",
-    "build": "node_modules/.bin/gatsby build",
+    "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "start": "npm run develop",
+    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
+    "clean": "gatsby clean",
     "lint": "node_modules/.bin/eslint src",
-    "test": "jest",
     "prettify": "prettier --write '{./,__{tests,mocks}__}/**/*.+(js|jsx)'"
   },
   "devDependencies": {
@@ -41,6 +47,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-preset-gatsby": "^0.1.6",
+    "cross-env": "^7.0.3",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -51,8 +58,6 @@
     "eslint-plugin-react": "^7.12.3",
     "esm": "^3.2.25",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.6.0",
-    "jest-emotion": "^10.0.6",
     "prettier": "1.15.3",
     "react-test-renderer": "^16.7.0"
   }

@@ -34,12 +34,6 @@ export default {
         path: `${__dirname}/src/assets/images/`
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: ``
-      }
-    },
     'gatsby-transformer-remark',
     'gatsby-transformer-json',
     'gatsby-transformer-yaml',

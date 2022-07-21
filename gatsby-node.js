@@ -37,10 +37,10 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark {
+            allAirtable {
               edges {
                 node {
-                  fields {
+                  data {
                     slug
                   }
                 }
@@ -53,12 +53,12 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.error);
         }
 
-        result.data.allMarkdownRemark.edges.forEach(edge => {
+        result.data.allAirtable.edges.forEach(edge => {
           createPage({
-            path: `${edge.node.fields.slug}`,
+            path: `${edge.node.data.slug}`,
             component: slash(blogPostTemplate),
             context: {
-              slug: edge.node.fields.slug
+              slug: edge.node.data.slug
             }
           });
         });
