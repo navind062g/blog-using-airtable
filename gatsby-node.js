@@ -55,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         result.data.allAirtable.edges.forEach(edge => {
           createPage({
-            path: `${edge.node.data.slug}`,
+            path: `blog/${edge.node.data.slug}`,
             component: slash(blogPostTemplate),
             context: {
               slug: edge.node.data.slug

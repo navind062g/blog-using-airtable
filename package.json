@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-plugin-emotion": "^9.2.4",
+    "dompurify": "^2.3.10",
     "dotenv": "^16.0.1",
     "emotion": "^9.2.4",
     "emotion-server": "^9.2.4",
@@ -28,10 +29,14 @@
     "react-dom": "^16.7.0",
     "react-emotion": "^9.0.0",
     "react-icons": "^4.4.0",
+    "rehype-stringify": "^9.0.3",
     "remark-html": "^15.0.1",
     "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "showdown": "^2.1.0",
     "styled-system": "^3.2.0",
-    "unified": "^10.1.2"
+    "unified": "^10.1.2",
+    "unified-stream": "^2.0.0"
   },
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",

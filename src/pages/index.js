@@ -9,6 +9,7 @@ import ButtonPrimary, { ButtonSecondary } from '../components/Buttons';
 export default ({ data }) => {
   const myData = data.allContentJson.edges[0].node.index;
   return (
+    <>
     <PageWrapper>
       <Box bg={colors.primary}>
         <Box
@@ -34,18 +35,8 @@ export default ({ data }) => {
           </Flex>
         </Box>
       </Box>
-      <Box bg={colors.primary} py={[3, 3, 4]}>
-        <Box
-          width={[1, 1, '1200px']}
-          m="0 auto"
-          px={[3, 3, 0]}
-          color={colors.secondary}
-        >
-          <h1>This could be another section</h1>
-          <p>With another text object</p>
-        </Box>
-      </Box>
     </PageWrapper>
+    </>
   );
 };
 
